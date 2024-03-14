@@ -1,0 +1,413 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Fira+Sans+Condensed:wght@400;700;800;900&family=Righteous&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+:root {
+  
+    --color-light: #dfdfdf;
+    --color-dark: #0d1f33;
+
+}
+
+html{
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
+
+body.active header{
+    background-color: var(--color-dark);
+    transition: 300ms ease-in-out;
+}
+
+body.active header a{
+    color: var(--color-light);
+    transition: 300ms ease-in-out;
+}
+
+.contenedor{
+    width: 50%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.dark-mode{
+    color: var(--color-light);
+    background-color: var(--color-dark);
+    transition: 300ms ease-in-out;
+}
+
+header{
+    overflow: hidden;
+    position: fixed;
+    z-index: 100000;
+    background-color: var(--color-light);
+    left: 25%;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo img{
+    display: block;
+    height: 60px;
+}
+
+.navbar .botones{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navbar a, button{
+    text-decoration: none;
+    color: var(--color-dark);
+    margin: 0 8px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1.2em;
+    display: block;
+    padding: 3px 0;
+    transition: 300ms ease-in-out;
+}
+
+.navbar a:hover{
+    border-bottom: solid 3px;
+    transition: 300ms ease-in-out;
+}
+
+.botones a span:first-child{
+    display: none;
+}
+
+/*.navbar button:hover{
+    scale: 1.25;
+    transition: 300ms ease-in-out;
+}*/
+
+.switch{
+    width: 60px;
+    height: 30px;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    border-radius: 100px;
+    border: var(--color-dark) solid 2px;
+    background-color: var(--color-light);
+}
+
+.switch i{
+    color: var(--color-dark);
+    font-size: 1rem;
+}
+
+.botones button::before{
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #f14668;
+    border: solid thin #f14668;
+    left: 0;
+    right: unset;
+}
+
+.botones button i:first-child{
+    color: var(--color-light);
+}
+
+.botones button.active::before{
+    right: 0;
+    left: unset;
+    border: solid thin #f14668;
+}
+
+/*.botones button.active i:first-child{
+    color: var(--color-light);
+}*/
+
+.botones button.active{
+    background-color: var(--color-dark);
+    border: var(--color-light) solid 2px;
+}
+
+/*DISEÑO DE BANNER*/
+
+.banner{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    padding-top: 60px;
+    
+}
+
+.banner .slogan{
+    font-size: 2.8rem;
+    font-family: "Righteous", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.banner .slogan span{
+    font-size: 1.2em;
+    color: #f14668;
+}
+
+.banner .img-avatar img{
+    width: 400px;
+}
+
+/*SOBRE MI*/
+.sobre-mi{
+    font-size: 1.7rem;
+    text-align: justify;
+    font-weight: 200;
+}
+
+.title{
+    color: #f14668;
+    font-size: 2.2rem;
+    margin: 70px 0 15px 0;
+}
+
+.sobre-mi p{
+    word-spacing: 4px;
+    line-height: 1.25em;
+    font-size: 1.35rem;
+}
+
+.centro-estudio{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.estudio-detalle{
+    padding-left: 30px;
+}
+
+.estudio-detalle p{
+    font-size: 1.1rem;
+}
+
+.estudios-logo{
+    width: 100px;
+    border-radius: 20px;
+}
+
+/*HABILIDADES*/
+.habilidades{
+    word-spacing: 4px;
+    line-height: 1.25em;
+    font-size: 1.35rem;
+    padding: 30px 0;
+}
+
+.lenguajes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}  
+
+.leng-det{
+    font-size: 1rem;
+    text-align: center;
+    margin: 20px;
+}
+
+.leng-img{
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    box-shadow: var(--color-dark) 0px 0px 20px 3px;
+    border-radius: 50%;
+    transition: .3s ease-in-out;
+}
+
+.leng-img:hover{
+    scale: 1.2;
+    transition: .3s ease-in-out;
+    box-shadow: var(--color-dark) 0px 0px 10px 3px;
+}
+
+body.active .leng-img{
+    box-shadow: var(--color-light) 0px 0px 20px 3px;
+}
+
+body.active .leng-img:hover{
+    box-shadow: var(--color-light) 0px 0px 10px 3px;
+}
+
+.leng-img img{
+    width: 50px;
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*PROYECTOS*/
+
+
+/*CONTACTO*/
+
+.contacto p{
+    word-spacing: 4px;
+    line-height: 1.25em;
+    font-size: 1.35rem;
+    padding: 30px 0;
+}
+
+/*FOOTER*/
+footer{
+    background-color: #f14668;
+    width: 100%;
+}
+
+#footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5px;
+}
+
+.copyr{
+    word-spacing: 4px;
+    font-size: .8rem;
+    color: white;
+}
+
+.redes{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.redes a{
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    font-size: 1.4em;
+}
+
+.redes a:hover{
+    scale: 1.2;
+    transition: .3s all;
+}
+
+
+@media screen and (max-width: 1500px){
+    .contenedor{
+        width: 70%;
+        margin: auto;
+    }
+    header{
+        left: 15%;
+    }
+}
+
+@media screen and (max-width: 1050px){
+    .contenedor{
+        width: 80%;
+        margin: auto;
+    }
+    header{
+        left: 10%;
+    }
+    .botones a span:first-child{
+        display: none;
+    }
+    .banner{
+        flex-direction: row;
+    }
+    .banner .img-avatar img{
+        width: 350px;
+    }
+    .banner .slogan{
+        font-size: 2rem;
+        line-height: 30px;
+    }
+}
+
+@media screen and (max-width: 770px){
+    .contenedor{
+        width: 90%;
+        margin: auto;
+    }
+    header{
+        left: 5%;
+    }
+    .botones a span:first-child{
+        display: none;
+    }
+    .banner{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .banner .img-avatar img{
+        width: 300px;
+    }
+    .banner .slogan{
+        font-size: 2rem;
+        line-height: 30px;
+    }
+}
+
+@media screen and (max-width: 680px){
+    .contenedor{
+        width: 100%;
+    }
+    header{
+        left: 0;
+    }
+    .botones a span:last-child{
+        display: none;
+    }
+    .botones a span:first-child{
+        display: block;
+    }
+    .banner .img-avatar img{
+        width: 300px;
+    }
+    .banner{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .banner .slogan{
+        font-size: 1.6rem;
+        line-height: 15px;
+    }
+}
+    
