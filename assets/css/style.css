@@ -285,7 +285,7 @@ body.active .leng-img:hover{
 }
 
 .card-proy{
-    box-shadow: #f14668 2px 2px 5px 5px;
+    box-shadow: var(--color-dark) 2px 2px 5px 5px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -296,8 +296,13 @@ body.active .leng-img:hover{
     margin: 30px 0;
 }
 
+body.active .card-proy{
+    background-color: var(--color-dark);
+    box-shadow: var(--color-light) 2px 2px 5px 5px;
+}
+
 .img-proy{
-    border-bottom: #f14668 solid 3px;
+    border-bottom: var(--color-dark) solid 3px;
 }
 
 .img-proy img{
