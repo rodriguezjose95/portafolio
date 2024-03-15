@@ -277,6 +277,49 @@ body.active .leng-img:hover{
 }
 
 /*PROYECTOS*/
+.proyects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card-proy{
+    box-shadow: #f14668 2px 2px 5px 5px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 360px;
+    background-color: var(--color-light);
+    margin: 30px 0;
+}
+
+.img-proy{
+    border-bottom: #f14668 solid 3px;
+}
+
+.img-proy img{
+    width: 100%;
+    transition: .3s all;
+}
+
+.img-proy img:hover{
+    scale: .8;
+    transition: .3s all;
+}
+
+.det-proy{
+    padding: 15px;
+}
+
+.det-proy h6{
+    word-spacing: 4px;
+    line-height: 1.25em;
+    font-size: 1.35rem;
+    padding: 30px 0;
+}
 
 
 /*CONTACTO*/
